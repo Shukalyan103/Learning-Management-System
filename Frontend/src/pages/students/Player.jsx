@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import { assets } from '../../assets/assets'
 import humanizeDuration from 'humanize-duration'
 import YouTube from 'react-youtube'
+import Footer from '../../components/students/Footer'
+import Ratting from '../../components/students/Ratting'
 
 const Player = () => {
 
@@ -79,6 +81,10 @@ const Player = () => {
               </div>
             ))}
           </div>
+          <div className="flex items-center gap-2 mt-10 py-3">
+            <h1 className='text-xl font-semibold'>Rate this course</h1>
+            <Ratting initialRating={0}/>
+          </div>
         </div>
 
 
@@ -101,6 +107,8 @@ const Player = () => {
 
 
       </div>
+
+      <Footer/>
     </>
   )
 }
